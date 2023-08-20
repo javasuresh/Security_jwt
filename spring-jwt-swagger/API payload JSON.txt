@@ -1,0 +1,69 @@
+Bearer "jwtToken"
+
+Auth-Controller:
+-----------------------------------
+1. Registration User:
+Methods: POST
+URL: http://localhost:2023/api/v1/auth/register
+Request: 
+{
+	"name":"suraj60",
+	"email":"suraj60@gmail.com",
+	"password":"suraj",
+	"about":"suraj 60"
+}
+---------------------------------------
+2. Login User:
+Methods: POST
+URL: http://localhost:2023/api/users/user/
+Request: 
+{
+    "username":"suraj60@gmail.com",
+    "password":"suraj"
+}
+-----------------------------------------------
+User Service:
+==================
+Pass JWT Token: Headers(Authorization, Bearer eyJhbGciOi)
+1. Create User:
+Methods: POST
+URL: http://localhost:2023/api/users/user
+Request:
+{
+	"name":"suresh55",
+	"email":"suresh55@gmail.com",
+	"password":"suresh55",
+	"about":"suresh 55"
+}
+---------------------
+Pass JWT Token: Headers(Authorization, Bearer eyJhbGciOi)
+2. Update User:
+Methods: PUT
+URL: http://localhost:2023/api/users/user/1
+Request:
+{
+	"name":"suresh kumar",
+	"email":"suresh222@gmail.com",
+	"password":"suresh123",
+	"about":"suresh123"
+}
+-----------------------------------
+Pass JWT Token: Headers(Authorization, Bearer eyJhbGciOi)
+3. GetAll User:
+Methods: GET
+URL: http://localhost:2023/api/users/user/
+Request: NA
+-----------------------------------------
+Pass JWT Token: Headers(Authorization, Bearer eyJhbGciOi)
+4. Get By ID User:
+Methods: GET
+URL: http://localhost:2023/api/users/user/1
+Request: NA
+----------------------------------
+Pass JWT Token: Headers(Authorization, Bearer eyJhbGciOi)
+5. Delete By ID User: Only Admin role 'ADMIN'
+Methods: DELETE
+URL: http://localhost:2023/api/users/user/1
+Request: NA
+----------------------------------
+
